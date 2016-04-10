@@ -19,6 +19,7 @@ gem 'json'
 gem 'oauth'
 gem 'mime-types'
 gem 'twitter-text'
+gem 'api_cache'
 
 
 group :development, :test do

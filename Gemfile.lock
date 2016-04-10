@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    api_cache (0.3.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
@@ -189,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  api_cache
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
   byebug
