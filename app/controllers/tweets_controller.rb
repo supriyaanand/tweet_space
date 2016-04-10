@@ -9,6 +9,10 @@ class TweetsController < ApplicationController
 
   def get_timeline
     @username = params["user"]["username"]
+    if @username.empty?
+      redirect_to root_url, :alert => "User name is required to retrieve tweets!"
+      return
+    end
     ApiRequest.cache(@username, Tweet::CACHE_POLICY) do
       tweets = TwitterClient.new.index(@username)
       if tweets.nil?

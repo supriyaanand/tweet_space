@@ -22,7 +22,7 @@
     <div class="col-md-5">
       <%= form_for(:user, :url => tweets_get_timeline_url, :method => :get) do |f| %>
         <p>Enter the user name of the profile whose tweets need to be retrieved! But, remember, you can only see those that are public!</p>
-        <%= f.text_field :username, :size=>"40", placeholder: "Enter usernames... " %><br /><br />
+        <%= f.text_field :username, :size=>"40", placeholder: "Enter usernames... ", required: true %><br /><br />
         <%= f.submit "Get tweets!", :class => "btn btn-primary btn-md", "data-disable-with"=> "Just a moment..." %>
       <% end %>
 <% end %>
