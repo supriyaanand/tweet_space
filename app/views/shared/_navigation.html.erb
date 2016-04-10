@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand navbar-left" href="/">Tweet Space</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, {:method => :delete, class: 'btn btn-primary'} %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary'  %>
+        <%= link_to "Sign Up", :new_user_registration, class: 'btn btn-primary' %>
+      <% end %>
+    </ul>
+  </div>
+</nav>

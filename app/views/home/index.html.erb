@@ -1,0 +1,13 @@
+<% if not user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Tweet Space</h1>
+
+    <p>Tweet Curation</p>
+
+    <%= link_to 'Login', :new_user_session, class: 'btn btn-lg btn-primary' %>
+    <%= link_to "Sign Up", :new_user_registration, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>
+
+
+

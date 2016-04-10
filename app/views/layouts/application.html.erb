@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TweetSpace</title>
+  <title>Tweet Space</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="main-container" class="container">
+  <div class="row">
+    <div id="sidebar1" class="col-md-2">
+    </div>
+    <div id="content" class="col-md-8">
+      <%= flash_messages %>
+      <%= render 'shared/navigation' %>
+      <%= yield %>
+    </div>
+    <div id="sidebar2" class="col-md-2">
+    </div>
+  </div>
+</div>
 
-<%= yield %>
 
 </body>
 </html>
