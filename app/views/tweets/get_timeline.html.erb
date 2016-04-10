@@ -1,0 +1,21 @@
+<div class="row">
+  <h4>Recent tweets from ...</h4>
+  <div class="col-md-4"></div>
+  <div id="name" class="col-md-4">
+    <%= image_tag(@results[:profile_img_url], size: "150x150", alt: "#{@username}") %>
+    <h2><%= @results[:name] %></h2>
+
+    <h4><%= "@#{@results[:username]}" %></h4>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+<div class="row">
+  <table class="table table-striped">
+    <% @results[:tweets_array].each do |tweet| %>
+      <tr>
+        <td><h4> <%= tweet[:text].html_safe %></h4></td>
+        <td><h6> <%= tweet[:created_at].to_datetime.strftime("%b-%d-%Y %H:%M") %></h6></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

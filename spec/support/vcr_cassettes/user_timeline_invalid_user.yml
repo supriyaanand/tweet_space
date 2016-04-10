@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=25&screen_name=jijlkpipi0909
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Grackle/0.3.0 (OAuth gem v0.5.1)
+      Authorization:
+      - OAuth oauth_consumer_key="<CLIENT_ID>", oauth_nonce="Rqrw0iHepfeRDZwaNZcw2i0mgf3O8rCTAeDUmwyeeYE",
+        oauth_signature="c50QQyKKqyC3RKPr5U0n%2FVES1vE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1460327224", oauth_token="<ACCESS_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '93'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 10 Apr 2016 22:26:28 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 10 Apr 2016 22:26:28 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A146032718872171532; Domain=.twitter.com; Path=/; Expires=Tue,
+        10-Apr-2018 22:26:28 UTC
+      - lang=en; Path=/
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - d62c93e002683af143afc895165e5f48
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '168'
+      X-Rate-Limit-Reset:
+      - '1460327625'
+      X-Response-Time:
+      - '27'
+      X-Transaction:
+      - 1534d74690290e24
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":34,"message":"Sorry, that page does not exist."}]}'
+    http_version: 
+  recorded_at: Sun, 10 Apr 2016 22:27:04 GMT
+recorded_with: VCR 2.7.0

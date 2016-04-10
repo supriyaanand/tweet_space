@@ -1,0 +1,19 @@
+# config/application.yml
+defaults: &defaults
+  twitter_api_url: 'https://api.twitter.com'
+  consumer_key: <%= ENV['Consumer_Key'] %>
+  consumer_secret: <%= ENV['Consumer_Secret'] %>
+  access_token:	<%= ENV['Access_Token'] %>
+  access_token_secret: <%= ENV['Access_Token_Secret'] %>
+  num_of_tweets_to_retrieve: <%= ENV['num_of_tweets_to_retrieve'] %>
+  email: <%= ENV['email'] %>
+  password: <%= ENV['password'] %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
