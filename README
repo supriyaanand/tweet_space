@@ -1,0 +1,43 @@
+== README
+
+Users will need to sign-up with the app to be able to retrieve public tweets from known Twitter handles. Authentication is handled via Devise.
+The app is setup with a Twitter client as a service that uses Grackle gem to connect to Twitter with OAuth and retrieve tweets.
+Tweets are construed as a resource with the model defining a cache policy that helps prevent API rate limiting
+Tweets Controller delegates call to the Twitter client service and is responsible for minifying the response made available to the view.
+
+
+* Ruby version
+ruby 2.3.0p73
+
+* Configuration
+
+Environment variables required:
+  Setup a twitter app through dev.twitter.com to obtain the following auth keys
+  consumer_key: <%= ENV['Consumer_Key'] %>
+  consumer_secret: <%= ENV['Consumer_Secret'] %>
+  access_token:	<%= ENV['Access_Token'] %>
+  access_token_secret: <%= ENV['Access_Token_Secret'] %>
+
+  Specify number of tweets to be retrieved
+
+  num_of_tweets_to_retrieve: <%= ENV['num_of_tweets_to_retrieve'] %>
+
+
+* Database creation
+
+  Create postgres databases for dev, test and prod environments with names being:
+  tweet_space_dev, tweet_space_test, tweet_space_prod
+
+  - or update database.yml file accordingly
+
+* Database initialization
+
+  Un-seeded database
+
+* How to run the test suite
+
+ Export required environment variables and run rspec spec
+
+* Deployment instructions
+
+To deploy on Heroku, setup config vars as stated in the Configuration section
