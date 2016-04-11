@@ -16,6 +16,9 @@ class TweetsController < ApplicationController
     ApiRequest.cache(@username, Tweet::CACHE_POLICY) do
       tweets = TwitterClient.new.index(@username)
       if tweets.nil?
+        #Todo Refine behavior to also cache invalid usernames and flag them in cache policy
+        # if twitter returns invalid response, destroy cached username record.
+        ApiRequest.find_by_username(@username).destroy
         redirect_to root_url, :notice => "Something went wrong. Please verify user name and try again."
         return
       end
